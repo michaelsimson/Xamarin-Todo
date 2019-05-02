@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TodoApp.AddMaintanance">
+             x:Class="TodoApp.AddCustomer">
     <StackLayout VerticalOptions="Start"
                  Margin="20,0">
-        <Entry x:Name="TxtTitle"
-               Placeholder="Title"
+        <Entry x:Name="TxtName"
+               Placeholder="Name"
                TextColor="{StaticResource blueColor}"/>
-        <Entry x:Name="TxtSubject" 
-               Placeholder="Subject"
+        <Entry x:Name="TxtAge" 
+               Placeholder="Age"
                TextColor="{StaticResource blueColor}"/>
-        <Entry x:Name="TxtDescription" 
-               Placeholder="Description"
+        <Entry x:Name="TxtEmail" 
+               Placeholder="Email"
                IsPassword="True"
                TextColor="{StaticResource blueColor}"/>
         <Button x:Name="BtnSave" 

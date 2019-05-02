@@ -1,29 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TodoApp"
-             x:Class="TodoApp.MainPage"
-             Title="Login">
-    <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="50" Spacing="40">
-        <Frame BackgroundColor="#DCDCDC" HasShadow="True" CornerRadius="10">
-            <StackLayout VerticalOptions="Center"
-                 Margin="20,0">
-                <Entry x:Name="TxtEmail"
-               Placeholder="Email"
-               Keyboard ="Email"
-               TextColor="{StaticResource blueColor}"/>
-                <Entry x:Name="TxtPassword" 
-               Placeholder="Password"
-               IsPassword="True"
-               TextColor="{StaticResource blueColor}"/>
-                <Button x:Name="BtnLogin" 
-                Text="Log In"
-                Clicked="BtnLogin_Clicked"
-                Margin="0,20,0,0"
-                Style="{StaticResource loginButton}"
-                
-                CornerRadius="10"/>
+             xmlns:local="clr-namespace:TodoApp.Controls"
+             x:Class="TodoApp.MainPage" >
+
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterLayout">
+            <StackLayout x:Name="ImageSection">
+                <Image x:Name="LoginIcon" Source="logo_new.png" Margin="0,80,0,0"></Image>
             </StackLayout>
-        </Frame>
-    </StackLayout>
+            <StackLayout x:Name="LoginEntries" Orientation="Vertical" Padding="30" Spacing="40">
+                <BoxView HeightRequest="10" />
+                <Frame BackgroundColor="#f2f2f2" HasShadow="False" CornerRadius="20">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Label Text="Login" 
+                               TextColor="Black" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Start" 
+                               FontSize="Large" />
+                        <local:ImageEntry x:Name="TxtEmail"  
+                                          Placeholder="Email or Phone Number"
+                                          PlaceholderColor="#bababa" HeightRequest="50"
+                                          Keyboard="Email" FontSize="14"
+                 TextColor="#bababa" Image="user" ImageAlignment="Right"/>
+                        <local:ImageEntry x:Name="TxtPassword"  Placeholder="Password"
+                 PlaceholderColor="#bababa" HeightRequest="50"
+                 IsPassword="True" FontSize="14"
+                 TextColor="#bababa" Image="password" ImageAlignment="Right" />
+                        <Button Text="Login" x:Name="BtnLogin" TextColor="White"
+                  FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"
+                  BackgroundColor="#3897f0" Clicked="BtnLogin_Clicked" BorderRadius="10" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="CopyRight" Padding="30" VerticalOptions="EndAndExpand">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="© CapeStart Information System Inc." FontAttributes="Bold"/>
+                            <Span Text="version 1.0.0" FontSize="Micro"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>All rights reserved.</Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

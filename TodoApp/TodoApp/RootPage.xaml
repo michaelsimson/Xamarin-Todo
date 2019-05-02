@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodoApp.RootPage" Icon="cs.png" Title="RootPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Clicked="OnLogoutButtonClicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Text="Cutomer" Grid.Row="0" Image="@drawable/customer.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BackgroundColor="#f2f2f2" Clicked="gotoCustomer"/>
+            <Button Text="Maintainance" Grid.Row="1" Image="" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BackgroundColor="#f2f2f2" Clicked="gotoMaintainnance"/>
+        </Grid>
+       
+    </ContentPage.Content>
+</ContentPage>

@@ -1,8 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TodoApp.HomePage"
-             Title="Maintanance List">
+             x:Class="TodoApp.CustomerPage"  Title="Customer List">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Clicked="NewButton_Clicked">
             <ToolbarItem.Icon>
@@ -15,8 +14,8 @@
 
     <StackLayout VerticalOptions="Center"
                  Margin="20">
-        
-        <ListView x:Name="MaintananceListView" RowHeight="75">
+
+        <ListView x:Name="CustomerListView" RowHeight="75">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -32,9 +31,9 @@
                                 <ColumnDefinition Width="60"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
 
-                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Title}" LineBreakMode="TailTruncation"></Label>
-                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Subject}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation"></Label>
-                            <Label Grid.Row="2" Grid.Column="0" Text="{Binding Description}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation"></Label>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" LineBreakMode="TailTruncation"></Label>
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Age}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation"></Label>
+                            <Label Grid.Row="2" Grid.Column="0" Text="{Binding Email}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation"></Label>
                             <Image Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Source="check.png" Aspect="AspectFill"/>
                         </Grid>
 
@@ -44,6 +43,7 @@
         </ListView>
 
     </StackLayout>
-
-
-</ContentPage>
+  </ContentPage>
+    
+    
+    

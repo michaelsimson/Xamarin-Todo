@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace TodoApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AddMaintanance : ContentPage
+	public partial class AddCustomer : ContentPage
 	{
-		public AddMaintanance ()
+		public AddCustomer ()
 		{
 			InitializeComponent ();
 		}

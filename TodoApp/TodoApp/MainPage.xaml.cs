@@ -12,22 +12,24 @@ namespace TodoApp
     {
         public MainPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
            
         }
        
 
-        private void BtnLogin_Clicked(object sender, EventArgs e)
+        private async void BtnLogin_Clicked(object sender, EventArgs e)
         {
             bool isEmailEmpty = string.IsNullOrEmpty(TxtEmail.Text);
             bool isPasswordEmpty = string.IsNullOrEmpty(TxtPassword.Text);
             if(isEmailEmpty || isPasswordEmpty)
             {
-                DisplayAlert("Alert!", "Email/Password mandatory.", "Close");
+                await DisplayAlert("Alert!", "Email/Password mandatory.", "Close");
             }
             else
             {
-                Navigation.PushAsync(new HomePage());
+                Navigation.InsertPageBefore(new RootPage(), this);
+                await Navigation.PopAsync();
             }
         }
     }
